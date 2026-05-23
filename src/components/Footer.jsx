@@ -2,13 +2,18 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <div className='bg-black px-5 lg:px-28 py-3 lg:py-6 flex items-center justify-between mt-16'>
-      <img className='invert h-5 lg:h-9' src="/assets/logo.svg" alt="" />
-
-      <div className='text-white lg:font-semibold lg:text-sm font-normal text-[10px] text-right lg:space-y-3'>
-        <p>@ 2025 Personal Portfolio</p>
-        <p>Made by -SK</p>
+    <footer className="w-full bg-[#04040a] border-t border-slate-900/60 px-5 lg:px-28 py-8 flex flex-col sm:flex-row items-center justify-between gap-y-4 mt-20 text-slate-400">
+      
+      {/* Typographic brand logo */}
+      <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent select-none">
+        ABDULLAH TANVEER
       </div>
-    </div>
+
+      <div className="text-xs lg:text-sm font-medium text-center sm:text-right space-y-1">
+        <p>© {new Date().getFullYear()} Abdullah Tanveer. All rights reserved.</p>
+      
+      </div>
+
+    </footer>
   )
 }

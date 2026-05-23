@@ -1,124 +1,98 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaJs, FaReact, FaNodeJs, FaPython, FaDatabase,FaJava } from "react-icons/fa";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { RiNextjsFill,RiTailwindCssFill } from "react-icons/ri";
+import { FaJs, FaReact, FaPython, FaDatabase, FaJava } from "react-icons/fa";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { CgFigma } from "react-icons/cg";
+import { SiFlutter, SiDart } from "react-icons/si";
 
 export default function Skills() {
   const [skills] = useState([
-    { id: 1, name: "JavaScript", icon: <FaJs size={50} /> },
-    { id: 2, name: "React", icon: <FaReact size={50} /> },
-    { id: 3, name: "Node.js", icon: <FaNodeJs size={50} /> },
-    { id: 4, name: "Python", icon: <FaPython size={50} /> },
-    { id: 5, name: "MongoDB", icon: <FaDatabase size={50} /> },
-    { id: 6, name: "Java", icon: <FaJava size={50} /> },
-    { id: 7, name: "Postgresql", icon: <BiLogoPostgresql size={50} /> },
-    { id: 8, name: "Next.js", icon: <RiNextjsFill size={50} /> },
-    { id: 9, name: "Tailwind", icon: <RiTailwindCssFill size={50} /> },
-    { id: 10, name: "Figma", icon: <CgFigma size={50} /> },
+    { id: 1, name: "JavaScript", icon: <FaJs size={40} />, color: "from-amber-400/20 to-amber-500/5", glow: "rgba(245, 158, 11, 0.3)", textColor: "group-hover:text-amber-400" },
+    { id: 2, name: "React", icon: <FaReact size={40} />, color: "from-cyan-400/20 to-cyan-500/5", glow: "rgba(34, 211, 238, 0.3)", textColor: "group-hover:text-cyan-400" },
+    { id: 3, name: "Flutter", icon: <SiFlutter size={40} />, color: "from-sky-400/20 to-sky-500/5", glow: "rgba(56, 189, 248, 0.3)", textColor: "group-hover:text-sky-400" },
+    { id: 4, name: "Python", icon: <FaPython size={40} />, color: "from-blue-500/20 to-yellow-500/5", glow: "rgba(59, 130, 246, 0.3)", textColor: "group-hover:text-blue-400" },
+    { id: 5, name: "MongoDB", icon: <FaDatabase size={40} />, color: "from-emerald-500/20 to-emerald-600/5", glow: "rgba(16, 185, 129, 0.3)", textColor: "group-hover:text-emerald-400" },
+    { id: 6, name: "Java", icon: <FaJava size={40} />, color: "from-red-500/20 to-orange-500/5", glow: "rgba(239, 68, 68, 0.3)", textColor: "group-hover:text-red-400" },
+    { id: 7, name: "Dart", icon: <SiDart size={40} />, color: "from-cyan-500/20 to-cyan-600/5", glow: "rgba(6, 182, 212, 0.3)", textColor: "group-hover:text-cyan-400" },
+    { id: 8, name: "Next.js", icon: <RiNextjsFill size={40} />, color: "from-slate-200/20 to-slate-500/5", glow: "rgba(255, 255, 255, 0.2)", textColor: "group-hover:text-white" },
+    { id: 9, name: "Tailwind", icon: <RiTailwindCssFill size={40} />, color: "from-cyan-400/20 to-cyan-500/5", glow: "rgba(34, 211, 238, 0.3)", textColor: "group-hover:text-cyan-400" },
+    { id: 10, name: "Figma", icon: <CgFigma size={40} />, color: "from-pink-500/20 to-violet-500/5", glow: "rgba(236, 72, 153, 0.3)", textColor: "group-hover:text-pink-400" },
   ]);
 
-  const [experiences] = useState([
-    {
-      id: 1,
-      company: "Google",
-      role: "Lead Software Engineer",
-      period: "Nov 2019 - Present",
-      description:
-        "Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience. Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience. Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience. Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience.",
-      logo: "/assets/google.svg",
+  // Framer Motion container variants for staggering
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.08,
+      },
     },
-    {
-      id: 2,
-      company: "Youtube",
-      role: "Software Engineer",
-      period: "Jan 2017 - Oct 2019",
-      description:
-        "At Youtube, I served as a  Software Engineer, focusing on the design and implementation of backend systems for the social media giant's dynamic platform. Working on projects that involved large-scale data processing and user engagement features, I leveraged my expertise to ensure seamless functionality and scalability.",
-      logo: "/assets/youtube.svg",
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 100, damping: 15 },
     },
-  ]);
+  };
 
   return (
-    <div className="mt-3 lg:mt-16" id="skills">
-      <div className="px-5 lg:px-28">
+    <div className="py-16 lg:py-24 relative overflow-hidden" id="skills">
+      {/* Background Decorative Element */}
+      <div className="absolute left-0 bottom-0 w-[25%] h-[35%] bg-cyan-600/5 blur-[120px] rounded-full pointer-events-none" />
 
-        <motion.h2
-          className="text-2xl lg:text-4xl text-center"
+      <div className="container mx-auto px-5 lg:px-28">
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+          className="text-center mb-12 lg:mb-20"
         >
-          My <span className="font-extrabold">Skills</span>
-        </motion.h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white">
+            My <span className="bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent font-extrabold">Skills</span>
+          </h2>
+          <p className="text-slate-400 mt-3 text-sm lg:text-base max-w-md mx-auto">
+            A snapshot of my core tools, languages, and technical frameworks.
+          </p>
+        </motion.div>
 
-        {/* Skill Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5 text-lg font-bold mt-7 lg:mt-16 w-full place-items-center gap-y-6 lg:gap-y-12">
+        {/* Skill Cards Grid */}
+        <motion.div
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 w-full justify-items-center"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {skills.map((skill) => (
             <motion.div
               key={skill.id}
-              className="bg-white border-2 hover:bg-black hover:text-white transition-all cursor-pointer border-black rounded p-3 h-36 w-36 lg:h-44 lg:w-44 flex flex-col items-center justify-center gap-5"
-              initial={{ opacity: 0, y: 5 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: skill.id * 0.1 }}
-              viewport={{ once: true }}
-            >
-              {skill.icon}
-              <p>{skill.name}</p>
-            </motion.div>
-          ))}
-        </div>
-
-      </div>
-
-      {/* Experience Section */}
-      <div className="bg-black w-full my-8 py-8 lg:my-16 lg:py-16">
-        <motion.h2
-          className="text-2xl lg:text-4xl text-center text-white"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          My <span className="font-extrabold">Experience</span>
-        </motion.h2>
-
-        {/* Experience Cards */}
-        <div className="px-5 lg:px-28 my-8 lg:mt-16 space-y-10">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={exp.id}
-              className="bg-black p-5 border border-[#D4D4D8] rounded-md hover:bg-[#27272A] transition-all cursor-pointer"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 100,
-                damping: 10,
-                delay: index * 0.2,
+              variants={cardVariants}
+              whileHover={{ 
+                y: -8, 
+                scale: 1.03,
+                boxShadow: `0 15px 30px ${skill.glow}`,
               }}
-              viewport={{ once: true }}
+              className="group relative cursor-pointer bg-slate-950/30 backdrop-blur-md border border-slate-900 rounded-[2rem] p-5 h-36 w-36 lg:h-40 lg:w-40 flex flex-col items-center justify-center gap-y-4 overflow-hidden transition-all duration-300"
             >
-              <div className="flex justify-between flex-col items-start lg:flex-row lg:items-center">
-                <div className="flex items-center gap-5">
-                  <img className="w-7" src={exp.logo} alt="" />
-                  <h2 className="font-semibold text-white text-lg lg:text-xl">
-                    {exp.role} at {exp.company}
-                  </h2>
-                </div>
-                <span className="text-[#D4D4D8] font-semibold text-sm mt-4 lg:mt-0 lg:text-base">
-                  {exp.period}
-                </span>
+              {/* Glowing Gradient Overlay on Hover */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0`} />
+
+              {/* Icon Wrapper */}
+              <div className={`relative z-10 text-slate-400 transition-all duration-300 transform group-hover:scale-110 ${skill.textColor}`}>
+                {skill.icon}
               </div>
-              <p className="text-[#D4D4D8] mt-6 text-sm/6 lg:text-base font-light">
-                {exp.description}
+
+              {/* Skill Name */}
+              <p className="relative z-10 text-slate-300 font-semibold text-sm lg:text-base tracking-wide group-hover:text-white transition-colors duration-300">
+                {skill.name}
               </p>
             </motion.div>
           ))}
-        </div>
-
+        </motion.div>
       </div>
     </div>
   );
