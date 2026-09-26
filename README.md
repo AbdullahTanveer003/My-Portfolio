@@ -1,58 +1,48 @@
-# Portfolio Website
+# Abdullah Tanveer — Mobile App Developer Portfolio
 
-This is a personal portfolio website built using Vite+React, Tailwind CSS, and Framer Motion to showcase my skills, projects, and experience.
+Personal portfolio website of **Abdullah Tanveer**, specialized in **Cross-Platform Mobile Application Development** using **Flutter** and **React Native**.
 
-## Features
-- **Responsive Design** – Works on all screen sizes.
-- **Smooth Animations** – Powered by Framer Motion for interactive user experience.
-- **Dark Mode Support** – Stylish UI with light and dark theme toggling.
-- **Optimized Performance** – Efficient rendering and smooth navigation.
-- **SEO Friendly** – Optimized for better search engine visibility.
+## Professional Positioning
+- **Title:** Mobile App Developer | Flutter & React Native
+- **Specialization:** Cross-Platform Mobile Applications
+- **Core Technologies:** Flutter, Dart, React Native, TypeScript, Firebase, Supabase, PostgreSQL, SQL, REST APIs, State Management
+
+## Key Features
+- **Mobile-First Aesthetic:** Clean dark mode styling, custom smartphone device mockups, and mobile application showcases.
+- **Tech Stack Spotlight:** Dedicated visual highlights for Flutter, React Native, Firebase, and Supabase.
+- **Interactive Timeline & Credentials:** Comprehensive Experience, Education, and Certifications sections.
+- **Responsive & Accessible:** Fluid scaling across all screen sizes (from 320px mobile to 4K displays).
+- **Smooth Animations:** Powered by Framer Motion and custom reactive UI indicators.
 
 ## Tech Stack
-- **Frontend:** React.js
-- **Styling:** Tailwind CSS
-- **Animations:** Framer Motion
+- **Framework:** React 19 + Vite
+- **Styling:** Tailwind CSS + Vanilla CSS
+- **Animations:** Framer Motion + React Type Animation
+- **Icons:** React Icons
 
-## Installation & Setup
+## Getting Started
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/sathishk-dev/illustration-portfolio.git
-   ```
-2. Navigate to the project directory:
-   ```sh
-   cd illustration-portfolio
-   ```
-3. Install dependencies:
-   ```sh
+1. Install dependencies:
+   ```bash
    npm install
    ```
-4. Start the development server:
-   ```sh
+
+2. Start development server:
+   ```bash
    npm run dev
    ```
-   The app will be available at `http://localhost:3000/`.
 
-## Demo
-Check out the live demo of the portfolio website: [Live Demo](https://sk-illustration-portfolio.netlify.app/)
-
-## Deployment
-To deploy the portfolio website, you can use platforms like:
-- **Vercel**
-- **Netlify**
-- **GitHub Pages** (with additional configurations)
-
-## How to Contribute
-If you’d like to contribute or improve this project, feel free to fork the repository and submit a pull request.
-
-## 🙌 Show Your Support
-If you like this project, please star it and share it with your friends!
+3. Build for production:
+   ```bash
+   npm run build
+   ```
 
 ## Contact
-If you have any questions or suggestions, feel free to reach out via:
-- **Email:** sathish31102004@gmail.com
-- **LinkedIn:** [@sathishk-dev](https://linkedin.com/in/sathishk-dev)
+- **Email:** iamabdullahtanveer@gmail.com
+- **Phone:** +92 326 7356166
+- **Location:** Gujrat, Pakistan
+- **LinkedIn:** [Abdullah Tanveer](https://www.linkedin.com/in/abdullah-tanveer-570216338/)
+- **GitHub:** [AbdullahTanveer003](https://github.com/AbdullahTanveer003)
 
 ---
-Made with ❤️ by Sathish Kumar.
+© 2026 Abdullah Tanveer. All rights reserved.

@@ -113,12 +113,12 @@ export default function Contact() {
                 </div>
                 
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider ml-1">Website (Optional)</label>
+                  <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider ml-1">App / Project Idea (Optional)</label>
                   <input 
-                    name="website" 
+                    name="project_idea" 
                     className="w-full px-5 py-3 bg-slate-950/50 border border-slate-900 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 outline-none text-white rounded-xl placeholder:text-slate-600 text-sm transition-all duration-300" 
                     type="text" 
-                    placeholder="https://example.com" 
+                    placeholder="e.g. Mobile E-commerce App" 
                   />
                 </div>
                 
@@ -127,7 +127,7 @@ export default function Contact() {
                   <textarea 
                     name="message" 
                     className="w-full px-5 py-3 h-32 bg-slate-950/50 border border-slate-900 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 outline-none text-white rounded-xl placeholder:text-slate-600 text-sm resize-none transition-all duration-300" 
-                    placeholder="How can I help you?" 
+                    placeholder="Describe your mobile app requirements..." 
                     required
                   ></textarea>
                 </div>
@@ -194,12 +194,12 @@ export default function Contact() {
           >
             <div>
               <div className="font-extrabold text-3xl lg:text-5xl tracking-tight text-white space-y-2">
-                <h2>Let's <span className="bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent font-black">talk</span> for</h2>
-                <h2>Something special</h2>
+                <h2>Let's Build</h2>
+                <h2 className="bg-gradient-to-r from-cyan-400 via-indigo-400 to-violet-500 bg-clip-text text-transparent font-black">Something Great</h2>
               </div>
 
-              <p className="text-slate-400 text-base leading-relaxed mt-6">
-                I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences. Let me know how I can contribute to your project!
+              <p className="text-slate-300 text-base leading-relaxed mt-6">
+                Have a mobile app idea or looking for a mobile developer? Let's connect.
               </p>
 
               {/* Direct Info List */}
@@ -221,23 +221,35 @@ export default function Contact() {
                 <motion.a
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-x-3 group w-fit"
-                  href="tel:03267356166"
+                  href="tel:+923267356166"
                 >
                   <span className="p-3 bg-slate-950/60 rounded-full border border-slate-900 group-hover:border-violet-500 text-violet-400 transition-colors duration-300">
                     <FaPhone className="w-5 h-5" />
                   </span>
                   <span className="group-hover:text-violet-400 transition-colors duration-300">
-                    03267356166
+                    +92 326 7356166
                   </span>
                 </motion.a>
+
+                <div className="flex items-center gap-x-3 group w-fit">
+                  <span className="p-3 bg-slate-950/60 rounded-full border border-slate-900 text-emerald-400">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </span>
+                  <span className="text-slate-300">
+                    Gujrat, Pakistan
+                  </span>
+                </div>
               </div>
             </div>
 
             {/* A graphic feature highlighting availability */}
-            <div className="mt-12 bg-gradient-to-tr from-cyan-500/10 to-violet-500/10 border border-slate-900/60 p-6 rounded-2xl flex items-center justify-between">
+            <div className="mt-10 bg-gradient-to-tr from-cyan-500/10 to-violet-500/10 border border-slate-900/60 p-6 rounded-2xl flex items-center justify-between">
               <div>
                 <p className="text-xs font-bold uppercase tracking-wider text-cyan-400">Current Status</p>
-                <h4 className="text-lg font-bold text-white mt-1">Available for Freelance & Roles</h4>
+                <h4 className="text-lg font-bold text-white mt-1">Available for Mobile App Roles & Projects</h4>
               </div>
               <span className="relative flex h-3 w-3 mr-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
